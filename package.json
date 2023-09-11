@@ -7,12 +7,22 @@
     "css-build": "node-sass --omit-source-map-url sass/mystyles.scss css/mystyles.css",
     "css-watch": "npm run css-build -- --watch",
     "start": "npm run css-watch"
-  },
-  
-
+  }
+  ,
+  "author": "",
   "license": "MIT",
   "devDependencies": {
     "bulma": "^0.9.4",
     "node-sass": "^9.0.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "connect-session-sequelize": "^7.1.7",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.6.0",
+    "sequelize": "^6.32.1"
   }
 }
