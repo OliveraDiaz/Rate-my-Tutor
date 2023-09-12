@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Tutor, User } = require ('../../models');
+const { Tutor } = require ('../../models');
 
 
 //all tutors
