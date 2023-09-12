@@ -6,49 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rate my Tutor</title>
     <link rel="icon" type="image/png" href="public/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link href="public/css/mystyles.css" rel="stylesheet">
 </head>
 
-<body> 
-    <header>
-        <img src="public/logo.png" alt="logo">
+
+
+
+   <header class="ml-5 ">
+        <img src="public\logo.png" alt="logo">
     </header>
 
-    <nav role="navigation" aria-label="main navigation">      
-        <div>
-            <a>Home</a>
-            <a>Tutors</a>
-            <a>Placeholder</a>
-        </div>
-        <div>
-            <a><strong>Sign up</strong></a>
-            <a>Log in</a>
+<body> 
+    <nav class="navbar pl-5 has-shadow" role="navigation" aria-label="main navigation">      
+        <div class="navbar-menu ">
+            <div class="navbar-start ">
+                 <a class="navbar-item has-text-black  "> Home </a>
+                 <a class="navbar-item has-text-black"> Tutors</a>
+                 <a class="navbar-item has-text-black"> Placeholder </a>
+             </div>
+      
+        <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons ">
+                <a class="button is-link ">
+                  <strong>Sign up</strong></a>
+                <a class="button is-light"> Log in</a>
+              </div>
+            </div>
+          </div>
         </div>
     </nav>
 
-    <div>
-        <aside>
-            <p>Find a Tutor</p>
-            <div>
-                <input type="text" placeholder="Search">
-            </div>
-        </aside>
+<div class=" is-flex mt-5  ">
+    <aside class="panel is-info ml-4 column is-one-quarter ">
+  <p class="panel-heading has-text-centered">
+    Find a Tutor
+  </p>
 
-        <main>
-            <section>
-                <div>
-                    <img src="public/Hero.webp" alt="Tutor helping student on zoom">
-                    <p>Your time is worth it!</p>
-                    <p>Get recommendations from other students who have already found their perfect tutor. Enter a tutor's name in the search bar or browse available tutors.</p>
-                </div>
-            </section>
-        </main>
-    </div>
+  <div class="panel-block ">
+    <p class="control has-icons-left ">
+      <input class="input is-primary " type="text" placeholder="Search">
+    </p>
+  </div>
+ </aside>
 
-    <footer>
-        <div>
-            <p>Rate my Tutor by Joseph Palafos, Sean Rowan, and Daisy Olivera. 2023</p>
+    <main class="has-background">
+  {{{body}}}
+    </main>
+
+</div>
+   
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Rate my Tutor</strong> by Joseph Palafos, Sean Rowan, and Daisy Olivera. 2023</a>
+          </p>
         </div>
-    </footer>
-</body>
-</html>
+      </footer>
