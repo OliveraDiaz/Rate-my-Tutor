@@ -18,6 +18,8 @@ Tutor.init(
     tutor_rating: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      defaultValue:1,
+      
     },
   },
   
