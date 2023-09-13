@@ -12,15 +12,15 @@ router.get('/', async (req, res) => {
       });
 
 //individual tutors 
-router.get('/:tutor_name', async (req,res) => {
+router.get('/:id', async (req,res) => {
     try{ 
-        const tutorData = await Tutor.findByPk(req.params.tutor_name);
+        const tutorData = await Tutor.findByPk(req.params.id);
         if(!tutorData) {
-            res.status(404).json({message: 'No tutor by this name!'});
+            res.status(404).json({message: 'No tutor by this id!'});
             return;
         }
         const tutor = tutorData.get({ plain: true });
-        res.render('tutor', tutor);
+        res.render('tutors', tutor);
       } catch (err) {
           res.status(500).json(err);
       };     
