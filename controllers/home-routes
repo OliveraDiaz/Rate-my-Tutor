@@ -5,7 +5,7 @@ const { Tutor } = require('../models');
 // need to get all blogposts
 router.get('/', async (req, res) => {
   try {
-    
+   
 
  res.render('homepage');
   } catch (err) {
@@ -24,7 +24,13 @@ router.get('/login', async (req, res) => {
   });
   router.get('/tutor', async (req, res) => {
     try {
-   res.render('tutors');
+      const dbTutorData = await Tutor.findAll({
+      });
+  
+      const tutors = dbTutorData.map((tutor) =>
+        tutor.get({ plain: true })
+      );
+   res.render('tutors',{tutors});
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
