@@ -8,6 +8,7 @@ router.get('/', async (req, res) => {
         res.json(err);
       });
         const tutors = tutorData.map((tutor) => tutor.get({ plain: true }));
+        //renders all.handlebars and inputs all tutors. 
         res.render('all', { tutors });
       });
 
@@ -20,6 +21,7 @@ router.get('/:id', async (req,res) => {
             return;
         }
         const tutor = tutorData.get({ plain: true });
+        //renders tutors.handlebars and inputs tutor by id. 
         res.render('tutors', tutor);
       } catch (err) {
           res.status(500).json(err);
