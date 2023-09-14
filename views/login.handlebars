@@ -1,50 +1,57 @@
-<form class="box has-background-grey-light login-form">
-      <div class="field">
-        <h2>Login</h2>
-        <label class="label">Username:</label>
-        <div class="control has-icons-left">
-          <input class="input is-success" type="text" placeholder="Username" id="username-login" >
-          <span class="icon is-small is-left">
-            <i class="fas fa-user"></i>
-          </span>
-        </div>
-      </div>
-      <div class="field">
-        <label class="label"> Password:</label>
-        <div class="control has-icons-left">
-          <input class="input is-success" type="text" placeholder="Password" id="password-login"  >
-          <span class="icon is-small is-left">
-            <i class="fas fa-lock"></i>
-          </span>
-        </div>
-      </div>
-      <div class="control">
-        <button class="button is-link">Login</button>
-      </div>
-    </form>
-    <form class="box has-background-grey-light signup-form">
-      <div class="field">
-        <h2>SignUp</h2>
-        <label class="label">Username:</label>
-        <div class="control has-icons-left">
-          <input class="input is-success" type="text" placeholder="Username" id="username-signup">
-          <span class="icon is-small is-left">
-            <i class="fas fa-user"></i>
-          </span>
-        </div>
-      </div>
-      <div class="field">
-        <label class="label"> Password:</label>
-        <div class="control has-icons-left">
-          <input class="input is-success" type="text" placeholder="Password" id="password-signup">
-          <span class="icon is-small is-left">
-            <i class="fas fa-lock"></i>
-          </span>
-        </div>
-       </div>
-       <div class="control">
-        <button class="button is-link">SignUp</button>
-    </div>
-    </form>
+<div class="is-flex is-justify-content-center mt-5 ">
 
+<form class="box has-background-beige-lighter signup-form mx-5">
+    <p class="control has-icons-left has-icons-right"></p>
+    <div class="field">
+      <h2 class = "is-size-5 p-1"> <em> Need an account?</em></h2>
+      <h2 class=""> <strong>SignUp</strong> using the form below!</h2>
+ 
+      <div class="control has-icons-left mt-5">
+        <input class="input is-info" type="text" placeholder="Username" id="username-signup">
+        <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
+        </span>
+      </div>
+    </div>
+    <div class="field">
+      <div class="control has-icons-left">
+        <input class="input is-info" type="password" placeholder="Password" id="password-signup">
+        <span class="icon is-small is-left">
+          <i class="fas fa-lock"></i>
+        </span>
+      </div>
+     </div>
+     <div class="control">
+      <button class="button is-link mt-5">SignUp</button>
+  </div>
+  </form>
+
+<form class="box has-background-grey-light login-form mx-5">
+    <div class="field">
+        <h2 class="is-size-5 p-1"> <em> Already have an account?</em></h2>
+      <h2><Strong> Login</Strong> below!</h2>
+
+
+      <div class="control has-icons-left mt-5">
+        <input class="input is-info" type="text" placeholder="Username" id="username-login" >
+        <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
+        </span>
+      </div>
+    </div>
+    <div class="field">
+
+      <div class="control has-icons-left">
+        <input class="input is-info" type="password" placeholder="Password" id="password-login"  >
+        <span class="icon is-small is-left">
+          <i class="fas fa-lock"></i>
+        </span>
+      </div>
+    </div>
+    <div class="control">
+      <button class="button is-link mt-5">Login</button>
+    </div>
+  </form>
 <script src="../public/js/login.js"></script>
+
+</div>
