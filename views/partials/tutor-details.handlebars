@@ -1,0 +1,25 @@
+ <div class="container">
+  <div class="columns is-multiline"> <!-- Use columns for a row of cards, is-multiline for responsive layout -->
+    <div class="column is-one-third"> <!-- Each column will contain one card -->
+      <div class="card">
+        <div class="card-content">
+          <h2 class="title is-4 is-size-2">{{tutor_name}}</h2>
+          <h3 class="is-size-4">{{tutor_name}} is rated a </h3>
+          <h2 class="is-size-6">Have you used this tutor before?</h2>
+          <h2 class="is-size-6">Leave your rating!</h2>
+          <div class="is-flex is-justify-content-space-evenly "> 
+          <label for="ratingSelect"></label>
+          <div class="select mt-2 is-primary is-flex-grow-1 ">
+            <select id="ratingSelect">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <button class="button is-link mt-2" onclick="submitRating()">Submit Rating</button>
+         </div>
+        </div>
+      </div>
+    </div>

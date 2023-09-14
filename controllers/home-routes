@@ -1,0 +1,56 @@
+const router = require('express').Router();
+const { Tutor } = require('../models');
+
+
+router.get('/', async (req, res) => {
+  try {
+   
+
+ res.render('homepage');
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get('/login', async (req, res) => {
+    try {
+   res.render('login');
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
+  router.get('/tutor', async (req, res) => {
+    try {
+      const dbTutorData = await Tutor.findAll({
+      });
+  
+      const tutors = dbTutorData.map((tutor) =>
+        tutor.get({ plain: true })
+      );
+   res.render('tutors',{tutors});
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
+  router.get('/tutor/:id', async (req,res) => {
+    try{ 
+        const tutorData = await Tutor.findByPk(req.params.id);
+        if(!tutorData) {
+            res.status(404).json({message: 'No tutor by this id!'});
+            return;
+        }
+        const tutor = tutorData.get({ plain: true });
+        //renders tutors.handlebars and inputs tutor by id. 
+        res.render('tutors', { tutor} );
+       // res.json(tutorData)
+      } catch (err) {
+          res.status(500).json(err);
+      };     
+})
+
+
+
+module.exports = router;

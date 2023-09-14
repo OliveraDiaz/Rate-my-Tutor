@@ -1,0 +1,22 @@
+<div class="tutor-container">
+  <div class="card-header col-md-10">
+    <h2>
+      All Tutors
+    </h2>
+  </div>
+  <!-- For each dish in the array of dish objects, the following <div> will be rendered. -->
+  {{#each tutors as |tutor|}}
+    <div class="tutor col-md-5">
+      <!-- We use dish.id instead of <od> and <li> elements. -->
+      <p>
+        name: {{tutor.tutor_name}}
+      </p>
+    </div>
+    <div class="col-md-7">
+      <p>
+        Rating:
+        {{tutor.tutor_rating}}
+      </p>
+    </div>
+  {{/each}}
+</div>
