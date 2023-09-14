@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Tutor extends Model {}
+class Rateing extends Model {}
 
-Tutor.init(
+Rateing.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,9 +11,16 @@ Tutor.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    tutor_name: {
-      type: DataTypes.STRING,
+   rate: {
+      type: DataTypes.INTEGER,
       allowNull: false,
+    },
+    tutor_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'tutor',
+        key: 'id',
+      },
     },
   },
   
@@ -22,8 +29,8 @@ Tutor.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'tutor',
+    modelName: 'rateing',
   }
 );
 
-module.exports = Tutor;
+module.exports = Rateing;
