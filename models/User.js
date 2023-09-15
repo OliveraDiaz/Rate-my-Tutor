@@ -25,8 +25,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        min: 5,
-        max: 20,
+        len: [6],
       },
     },
   },
