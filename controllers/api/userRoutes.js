@@ -3,14 +3,12 @@ const { User } = require ('../../models');
 
 router.post('/', async (req, res) => {
   try {
-    const newUser = await User.create({
-      username: req.body.username,
-      password: req.body.password,
-    });
+   
 
     // Set up sessions with a 'loggedIn' variable set to `true`
    
     const existingUser = await User.findOne({ where: { username: req.body.username}});
+    console.log(existingUser)
       if(existingUser){
           res
           .status(400).json({message: 'Name taken, choose another'});
@@ -18,6 +16,10 @@ router.post('/', async (req, res) => {
       }else{
           req.session.save(() => {
           req.session.loggedIn = true;
+      });
+      const newUser = await User.create({
+        username: req.body.username,
+        password: req.body.password,
       });
           res.status(200).json(newUser);
       }

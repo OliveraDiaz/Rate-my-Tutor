@@ -26,7 +26,6 @@ User.init(
       allowNull: false,
       validate: {
         min: 5,
-        max: 20,
       },
     },
   },
