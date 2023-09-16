@@ -11,37 +11,52 @@
 </head>
 
 
-
-
-   <header class="ml-5 ">
-        <img src="logo.png" width= "112" height="28" alt="logo">
-    </header>
-
 <body> 
-    <nav class="navbar pl-5 has-shadow" role="navigation" aria-label="main navigation">      
-        <div class="navbar-menu ">
-            <div class="navbar-start ">
-                 <a class="navbar-item has-text-black" href="/"> Home </a>
-                 <a class="navbar-item has-text-black" href="/tutor"> Tutors</a>
-                 <a class="navbar-item has-text-black"> Placeholder </a>
-             </div>
-      
-        <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                {{#if logged_in}}
-                <a href="/profile">profile</a> |
-                <button class="button is-link" id="logout">logout</button>
-                {{else}}
-                <a class="button is-link " href="/signup">
-                  <strong>Sign up</strong></a>
-                <a class="button is-light" href="/login"> Log in</a>
-                {{/if}}
-              </div>
-            </div>
-          </div>
+<nav class="navbar pl-5" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand ">
+    <a class="navbar-item">
+      <img src="public/logo.png" width="200" >
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div  id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item  " href="/" >
+        Home
+      </a>
+
+      <a class="navbar-item"href="/tutor">
+        Tutors
+      </a>
+    </div>
+
+
+
+
+
+    
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-link">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light" href="/login">
+            Log in
+          </a>
         </div>
-    </nav>
+      </div>
+    </div>
+  </div>
+
+  
+</nav>
 
 <div class=" is-flex mt-5  ">
     <aside class="panel is-info ml-4 column is-one-quarter ">
@@ -70,3 +85,27 @@
           </p>
         </div>
       </footer>
+
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+// Add a click event on each of them
+$navbarBurgers.forEach( el => {
+  el.addEventListener('click', () => {
+
+    // Get the target from the "data-target" attribute
+    const target = el.dataset.target;
+    const $target = document.getElementById(target);
+
+    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+    el.classList.toggle('is-active');
+    $target.classList.toggle('is-active');
+
+  });
+});
+
+});
+</script>
