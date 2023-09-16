@@ -25,7 +25,11 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
+<<<<<<< HEAD
         len: [6],
+=======
+        min: 5,
+>>>>>>> 0ef144b3f9f9acecbfd44e3f9101921281629e4d
       },
     },
   },
