@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate my Tutor</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="public/css/mystyles.css" rel="stylesheet">
+</head>
+
+
+<body> 
+<nav class="navbar pl-5" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand ">
+    <a class="navbar-item">
+      <img src="public/logo.png" width="200" >
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div  id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item  " href="/" >
+        Home
+      </a>
+
+      <a class="navbar-item"href="/tutor">
+        Tutors
+      </a>
+    </div>
+
+
+
+
+
+    
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-link">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light" href="/login">
+            Log in
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</nav>
+
+<div class=" is-flex mt-5  ">
+
+  
+    <aside class="panel is-info ml-4 column is-one-quarter ">
+  <p class="panel-heading has-text-centered">
+    Find a Tutor
+  </p>
+
+  <div class="panel-block ">
+    <p class="control has-icons-left ">
+      <input class="input is-primary " type="text" placeholder="Search">
+    </p>
+  </div>
+ </aside>
+
+    <main class="has-background">
+  {{{body}}}
+    </main>
+
+</div>
+   
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Rate my Tutor</strong> by Joseph Palafos, Sean Rowan, and Daisy Olivera. 2023</a>
+          </p>
+        </div>
+      </footer>
+
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+// Add a click event on each of them
+$navbarBurgers.forEach( el => {
+  el.addEventListener('click', () => {
+
+    // Get the target from the "data-target" attribute
+    const target = el.dataset.target;
+    const $target = document.getElementById(target);
+
+    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+    el.classList.toggle('is-active');
+    $target.classList.toggle('is-active');
+
+  });
+});
+
+});
+</script>
