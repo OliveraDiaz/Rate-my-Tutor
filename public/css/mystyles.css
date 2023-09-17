@@ -1,10 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
 /* Bulma Utilities */
+.card-content {
+
+  padding: 1rem;
+  white-space: normal;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .custom-navbar {
   max-width: 1800px; /* Adjust the value to your preferred width */
   margin: 0 auto; /* Center the navbar horizontally */
-}
 
+}
+.card {
+  width: fit-content;
+  background-color: #8ecae6;
+}
 .button, .input, .textarea, .select select, .file-cta,
 .file-name {
   : none;
