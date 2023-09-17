@@ -4,6 +4,7 @@
   max-width: 1800px; /* Adjust the value to your preferred width */
   margin: 0 auto; /* Center the navbar horizontally */
 }
+
 .button, .input, .textarea, .select select, .file-cta,
 .file-name {
   : none;
