@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link href="public/css/mystyles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cf78ac0730.js" crossorigin="anonymous"></script>
 </head>
 
 
@@ -15,7 +16,7 @@
 <nav class="navbar pl-5" role="navigation" aria-label="main navigation">
   <div class="navbar-brand ">
     <a class="navbar-item">
-      <img src="logo.png" width="200" >
+      <img src="public/logo.png" width="200" >
     </a>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -44,7 +45,7 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-link" href="/signup">
+          <a class="button is-link">
             <strong>Sign up</strong>
           </a>
           <a class="button is-light" href="/login">
@@ -60,7 +61,7 @@
 
 <div class=" is-flex mt-5  ">
 
-    <div class="columns is -multiline">
+  
     <aside class="panel is-info ml-4 column is-one-quarter ">
   <p class="panel-heading has-text-centered">
     Find a Tutor
@@ -74,9 +75,44 @@
  </aside>
 
     <main class="has-background">
-  {{{body}}}
+      <div class="columns is-centered">
+        <div class = "column is-full">
+
+       
+        <div class="is-flex is-justify-content-center">
+        <form class="box has-background-beige-lighter signup-form ml-5 card">
+            <p class="control has-icons-left has-icons-right"></p>
+            <div class="field">
+              <h2 class = "is-size-4 p-1"> <em> Need an account?</em> <Strong>SignUp</strong> using the form below!</h2>
+         
+         
+              <div class="control has-icons-left mt-5">
+                <input class="input is-info" type="text" placeholder="Username" id="username-signup">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-user"></i>
+                </span>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control has-icons-left">
+                <input class="input is-info" type="password" placeholder="Password" id="password-signup">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-lock"></i>
+                </span>
+              </div>
+             </div>
+             <div class="control">
+              <button class="button is-link mt-5" type="submit">SignUp</button>
+
+          </div>
+          </form>
+        
+        <script src="../public/js/signup.js"></script>
+       </div>
+      </div>
+    </div>
     </main>
-</div>
+
 </div>
    
 
