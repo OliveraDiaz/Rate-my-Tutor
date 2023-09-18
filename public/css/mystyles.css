@@ -1,5 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
 /* Bulma Utilities */
+/* CSS for screens narrower than 768px (adjust the breakpoint as needed) */
+
+
+@media (max-width: 768px) {
+  .columns.is-multiline {
+    flex-direction: column; /* Stack the columns vertically */
+  }
+
+  .column {
+    width: 100%; /* Make both aside and main take the full width */
+  }
+}
+
 .card-content {
 
   padding: 1rem;
