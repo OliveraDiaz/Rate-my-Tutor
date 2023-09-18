@@ -33,7 +33,7 @@ You can reach me with questions at Please send any additional questions to djane
 GitHub: OliveraDiaz, Palafos23 & SeanDRowan
 
 ## Links
-LINK URL Github https://github.com/OliveraDiaz/Rate-my-Tutor.git
+Deployed app: https://serene-journey-47318-c81386755a3c.herokuapp.com/ Github https://github.com/OliveraDiaz/Rate-my-Tutor.git
 
 ## Screenshot
 ![Screenshot](./screenshot.png)
