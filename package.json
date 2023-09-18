@@ -4,7 +4,7 @@
   "description": "As an coding bootcamp student, you have alot of choices from tutors to pick from. Instead of randomly picking a tutor, get an overall rating/recommendation for tutors from other bootcamp students with our app!",
   "main": "sass/mystyles.scss",
   "scripts": {
-    "css-build": "node-sass --omit-source-map-url sass/mystyles.scss css/mystyles.css",
+    "css-build": "css/mystyles.css",
     "css-watch": "npm run css-build -- --watch",
     "start": "node server.js",
     "seed": "node seeds/index.js"
@@ -27,3 +27,4 @@
     "sequelize": "^6.32.1"
   }
 }
+
