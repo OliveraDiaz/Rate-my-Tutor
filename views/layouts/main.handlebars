@@ -37,12 +37,13 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-link" href="/signup">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light" href="/login">
-            Log in
-          </a>
+          {{#if logged_in}}
+            <a class="button is-link" id="logout">logout</a>
+          {{else}}
+            <a class="button is-link " href="/signup">
+            <strong>Sign up</strong></a>
+            <a class="button is-light" href="/login"> Log in</a>
+          {{/if}}
         </div>
       </div>
     </div>
@@ -79,7 +80,12 @@
         </div>
       </footer>
 
-<script>
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+
+  </body>
+  <script>
         document.addEventListener('DOMContentLoaded', () => {
 
 // Get all "navbar-burger" elements
@@ -102,3 +108,4 @@ $navbarBurgers.forEach( el => {
 
 });
 </script>
+</html>

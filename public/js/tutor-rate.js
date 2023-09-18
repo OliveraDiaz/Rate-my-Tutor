@@ -1,7 +1,8 @@
 const submitRating = async (event) => {
     event.preventDefault();
+    console.log("click")
 
-    const rateing = document.getElementById('#rateingSelect').value
+    const rateing = document.getElementById('#rateingSelect').value;
    // produce sum for tutors rating
    // fetch request get ratings using dot notattion in a new array
    // loop through rating data array and apply math (helper)
@@ -10,12 +11,12 @@ const submitRating = async (event) => {
     if (rateing) {
         const response = await fetch('/tutors', {
             method: 'POST',
-            body: JSON.stringify({rateing }),
+            body: JSON.stringify({ rateing }),
             headers: { 'Content-Type': 'application/json'},
         });
         console.log(response)
     }
 }
 document
-.querySelector('.rateingSelect')
-.addEventListener('submit', submitRating);
+.querySelector('#rating-btn')
+.addEventListener('click', submitRating);
