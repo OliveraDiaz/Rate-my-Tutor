@@ -1,17 +1,14 @@
 function search_bar() {
     let input = document.getElementById('searchbar').value
     input=input.toLowerCase();
-    //let x = document.getElementsByClassName('animals');
+
       
-    for (i = 0; i < x.length; i++) { 
-        if (!x[i].innerHTML.toLowerCase().includes(input)) {
-            x[i].style.display="none";
-        }
-        else {
-            x[i].style.display="list-item";                 
-        }
+    if (input ='a'){
+        document.location.replace('/tutor/1');
+
     }
 }
+
 document
-.querySelector('#findtutor')
-.addEventListener('submit', search_bar);
+.querySelector('#searchbutton')
+.addEventListener('submit', search_bar());

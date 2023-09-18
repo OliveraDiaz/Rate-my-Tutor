@@ -27,9 +27,15 @@
   </div>
   <div  id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item  " href="/" >
+      {{#if logged_in}}
+ <a class="navbar-item  " href="/userhomepage" >
         Home
       </a>
+      {{else}}
+ <a class="navbar-item  " href="/" >
+        Home
+      </a>
+      {{/if}}
       <a class="navbar-item"href="/tutor">
         Tutors
       </a>
@@ -56,11 +62,11 @@
     <aside class="panel is-info ml-4 column is-one-quarter ">
   <p class="panel-heading has-text-centered" id="findtutor">
     Find a Tutor
-  </p>
+  </p> 
 
   <div class="panel-block ">
     <p class="control has-icons-left ">
-      <input id='searchbar' class="input is-primary " type="text" placeholder="Search">
+    
     </p>
   </div>
  </aside>
