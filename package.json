@@ -13,8 +13,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "bulma": "^0.9.4",
-    "node-sass": "^9.0.0"
+    "bulma": "^0.9.4"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
@@ -26,5 +25,6 @@
     "mysql2": "^3.6.0",
     "sequelize": "^6.32.1"
   }
+
 }
 

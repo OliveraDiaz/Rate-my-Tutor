@@ -32,7 +32,7 @@ router.get('/signup', async (req, res) => {
     }
   });
 
-  router.get('/tutor', async (req, res) => {
+  router.get('/tutor',withAuth, async (req, res) => {
     try {
       const dbTutorData = await Tutor.findAll({include:[
         { model:Rateing,
