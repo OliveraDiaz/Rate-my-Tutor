@@ -1,11 +1,7 @@
 const router = require('express').Router();
-<<<<<<< HEAD
-const { Tutor } = require('../models');
-const withAuth = require('../utils/helpers');
-=======
-const { Tutor, Rateing } = require('../models');
+const { Tutor, Rateing, User } = require('../models');
+const withAuth = require('../utils/helpers')
 
->>>>>>> 0ef144b3f9f9acecbfd44e3f9101921281629e4d
 
 router.get('/', async (req, res) => {
   try {
@@ -67,10 +63,6 @@ router.get('/signup', async (req, res) => {
        
         const tutor = tutorData.get({ plain: true });
         //renders tutors.handlebars and inputs tutor by id. 
-<<<<<<< HEAD
-        //res.render('tutors', { tutor} );
-        res.json(tutorData)
-=======
         
         res.render('single-tutors',{tutor});
         //res.json(tutor)
@@ -79,13 +71,27 @@ router.get('/signup', async (req, res) => {
           res.status(404).json({message: 'No tutor by this id!'});
           return;
       }
->>>>>>> 0ef144b3f9f9acecbfd44e3f9101921281629e4d
       } catch (err) {
           res.status(500).json(err);
       };     
 })
 
+router.get('/userhomepage', withAuth, async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+    });
+    console.log(userData)
+    const user = userData.get({ plain: true });
 
+    res.render('homepage', {
+      ...user,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
 

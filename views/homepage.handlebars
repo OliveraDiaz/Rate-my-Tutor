@@ -1,4 +1,7 @@
      <section class="is-primary hero mr-3 ml-6 box" >
+            {{#if logged_in}}
+            <h1 class="is-centered">{{username}} is logged in!</h1>
+            {{/if}}
             <div class="hero-body">
                 <img class= "box" src="Hero.webp" alt="Tutor helping student on zoom">
               <p class="title has-text-centered ">
@@ -10,3 +13,4 @@
               </p>
             </div>
           </section>
+    
