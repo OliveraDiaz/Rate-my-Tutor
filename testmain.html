@@ -16,7 +16,7 @@
 <nav class="navbar pl-5" role="navigation" aria-label="main navigation">
   <div class="navbar-brand ">
     <a class="navbar-item">
-      <img src="public/logo.png" width="200" >
+      <img src="logo.png" width="200" >
     </a>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -25,27 +25,19 @@
       <span aria-hidden="true"></span>
     </a>
   </div>
-
   <div  id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
       <a class="navbar-item  " href="/" >
         Home
       </a>
-
       <a class="navbar-item"href="/tutor">
         Tutors
       </a>
     </div>
-
-
-
-
-
-    
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-link">
+          <a class="button is-link" href="/signup">
             <strong>Sign up</strong>
           </a>
           <a class="button is-light" href="/login">
@@ -55,58 +47,56 @@
       </div>
     </div>
   </div>
-
-  
 </nav>
 
-<div class=" is-flex mt-5  ">
+<div class=" is-flex columns is-multiline ">
 
   
     <aside class="panel is-info ml-4 column is-one-quarter ">
-  <p class="panel-heading has-text-centered">
+  <p class="panel-heading has-text-centered" id="findtutor">
     Find a Tutor
   </p>
 
   <div class="panel-block ">
     <p class="control has-icons-left ">
-      <input class="input is-primary " type="text" placeholder="Search">
+      <input id='searchbar' class="input is-primary " type="text" placeholder="Search">
     </p>
   </div>
  </aside>
 
     <main class="has-background">
-      <div class="columns is-centered">
-        <div class = "column is-full">
-           <div class="is-flex is-justify-content-center">
-        <form class="box has-background-beige-lighter ml-5 card">
-            <p class="control has-icons-left has-icons-right"></p>
-            <div class="field">
-              <h2 class = "is-size-4 p-1"> <em> Already have an account?</em> <Strong>Login</strong> below!</h2>
-        
-              <div class="control has-icons-left mt-5">
-                <input class="input is-info" type="text" placeholder="Username" id="username-signup">
-                <span class="icon is-small is-left">
-              <i class="fas fa-user"></i>
-            </span>
-              </div>
-          </div>
-        <div class="field">
-    
-          <div class="control has-icons-left">
-            <input class="input is-info" type="password" placeholder="Password" id="password-login"  >
-            <span class="icon is-small is-left">
-              <i class="fas fa-lock"></i>
-            </span>
-          </div>
-        </div>
-    
-      <div class="field">
-        <div class="control">
-          <button type="submit" class="button is-link mt-5">Login</button>
-        </div>
-      </div>
-    </form>
-<script src="../public/js/login.js"></script>
+      <section class="section">
+        <div class="container">
+         <div class="columns is-multiline"> <!-- Use columns for a row of cards, is-multiline for responsive layout -->
+           <div class="column is-12-desktop is-6-tablet is-12-mobile"> <!-- Each column will contain one card -->
+             <div class="card">
+               <div class="card-content">
+                 <h2 class="title is-4 is-size-2">{{tutor_name}}</h2>
+                 <h3 class="is-size-4">{{tutor_name}} is rated at {{rateings.[0].rate}}</h3>
+                 <h2 class="is-size-6">Have you used this tutor before?</h2>
+                 <h2 class="is-size-6">Leave your rating!</h2>
+                 <div class="is-flex is-justify-content-space-evenly "> 
+                 <label for="ratingSelect"></label>
+                 <div class="select mt-2 is-primary is-flex-grow-1 ">
+                   <select id="ratingSelect">
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                   </select>
+                 </div>
+                 <button class="button is-link mt-2" onclick="submitRating()">Submit Rating</button>
+                </div>
+               </div>
+             </div>
+           </div>z
+       </section>
+       
+
+
+
+  
 
     </main>
 
