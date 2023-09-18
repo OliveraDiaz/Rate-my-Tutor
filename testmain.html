@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate my Tutor</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="public/css/mystyles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cf78ac0730.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body> 
+<nav class="navbar pl-5" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand ">
+    <a class="navbar-item">
+      <img src="logo.png" width="200" >
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div  id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item  " href="/" >
+        Home
+      </a>
+      <a class="navbar-item"href="/tutor">
+        Tutors
+      </a>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-link" href="/signup">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light" href="/login">
+            Log in
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class=" is-flex columns is-multiline ">
+
+  
+    <aside class="panel is-info ml-4 column is-one-quarter ">
+  <p class="panel-heading has-text-centered" id="findtutor">
+    Find a Tutor
+  </p>
+
+  <div class="panel-block ">
+    <p class="control has-icons-left ">
+      <input id='searchbar' class="input is-primary " type="text" placeholder="Search">
+    </p>
+  </div>
+ </aside>
+
+    <main class="has-background">
+      <section class="section">
+        <div class="container">
+         <div class="columns is-multiline"> <!-- Use columns for a row of cards, is-multiline for responsive layout -->
+           <div class="column is-12-desktop is-6-tablet is-12-mobile"> <!-- Each column will contain one card -->
+             <div class="card">
+               <div class="card-content">
+                 <h2 class="title is-4 is-size-2">{{tutor_name}}</h2>
+                 <h3 class="is-size-4">{{tutor_name}} is rated at {{rateings.[0].rate}}</h3>
+                 <h2 class="is-size-6">Have you used this tutor before?</h2>
+                 <h2 class="is-size-6">Leave your rating!</h2>
+                 <div class="is-flex is-justify-content-space-evenly "> 
+                 <label for="ratingSelect"></label>
+                 <div class="select mt-2 is-primary is-flex-grow-1 ">
+                   <select id="ratingSelect">
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                   </select>
+                 </div>
+                 <button class="button is-link mt-2" onclick="submitRating()">Submit Rating</button>
+                </div>
+               </div>
+             </div>
+           </div>z
+       </section>
+       
+
+
+
+  
+
+    </main>
+
+</div>
+   
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Rate my Tutor</strong> by Joseph Palafos, Sean Rowan, and Daisy Olivera. 2023</a>
+          </p>
+        </div>
+      </footer>
+
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+// Add a click event on each of them
+$navbarBurgers.forEach( el => {
+  el.addEventListener('click', () => {
+
+    // Get the target from the "data-target" attribute
+    const target = el.dataset.target;
+    const $target = document.getElementById(target);
+
+    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+    el.classList.toggle('is-active');
+    $target.classList.toggle('is-active');
+
+  });
+});
+
+});
+</script>

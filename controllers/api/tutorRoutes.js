@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
       });
 
 //individual tutors 
-/*
+
 router.get('/:id', async (req,res) => {
     try{ 
         const tutorData = await Tutor.findByPk(req.params.id);
@@ -22,12 +22,12 @@ router.get('/:id', async (req,res) => {
         }
         const tutor = tutorData.get({ plain: true });
         //renders tutors.handlebars and inputs tutor by id. 
-        res.render('tutors', { tutor} );
+        res.render('single-tutors', { tutor} );
        // res.json(tutorData)
       } catch (err) {
           res.status(500).json(err);
       };     
-})*/
+})
 
 //tutor ratings
 router.get('/', async (req, res) => {

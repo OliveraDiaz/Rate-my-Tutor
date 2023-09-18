@@ -1,5 +1,35 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
 /* Bulma Utilities */
+/* CSS for screens narrower than 768px (adjust the breakpoint as needed) */
+
+
+@media (max-width: 768px) {
+  .columns.is-multiline {
+    flex-direction: column; /* Stack the columns vertically */
+  }
+
+  .column {
+    width: 100%; /* Make both aside and main take the full width */
+  }
+}
+
+.card-content {
+
+  padding: 1rem;
+  white-space: normal;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.custom-navbar {
+  max-width: 1800px; /* Adjust the value to your preferred width */
+  margin: 0 auto; /* Center the navbar horizontally */
+
+}
+.card {
+  width: fit-content;
+  background-color: #8ecae6;
+}
 .button, .input, .textarea, .select select, .file-cta,
 .file-name {
   : none;
@@ -75,12 +105,6 @@
   position: relative;
   width: 1em; }
 
-.hero-video {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0; }
 
 .navbar-burger {
   -moz-appearance: none;
@@ -146,10 +170,6 @@ html {
 *, *::before, *::after {
   box-sizing: inherit; }
 
-img,
-video {
-  height: auto;
-  max-width: 100%; }
 
 iframe {
   border: 0; }
@@ -2657,7 +2677,7 @@ a.navbar-item,
   flex-grow: 0;
   flex-shrink: 0; }
   .navbar-item img {
-    max-height: 1.75rem; }
+    max-height: 5rem; }
   .navbar-item.has-dropdown {
     padding: 0; }
   .navbar-item.is-expanded {
@@ -3362,20 +3382,6 @@ a.navbar-item,
   .hero.is-fullheight {
     min-height: 100vh; }
 
-.hero-video {
-  overflow: hidden; }
-  .hero-video video {
-    left: 50%;
-    min-height: 100%;
-    min-width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translate3d(-50%, -50%, 0); }
-  .hero-video.is-transparent {
-    opacity: 0.3; }
-  @media screen and (max-width: 768px) {
-    .hero-video {
-      display: none; } }
 
 .hero-buttons {
   margin-top: 1.5rem; }
